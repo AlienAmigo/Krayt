@@ -1,0 +1,24 @@
+%svg-common {
+	background: url("../img/sprite-svg-d5eec1f8.svg") no-repeat;
+}
+
+.i-close-modal {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.i-close-modal--dim {
+	width: 14px;
+	height: 14px;
+}
+
+.i-up-btn {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.i-up-btn--dim {
+	width: 80px;
+	height: 80px;
+}
+
