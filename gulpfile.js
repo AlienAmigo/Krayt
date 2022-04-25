@@ -169,7 +169,8 @@ function copyImages() {
   return src([
     dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}',
     '!' + dir.src + 'img/spritesmith/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}',
-    '!' + dir.src + 'img/sprite-svg/*.svg'
+    '!' + dir.src + 'img/sprite-svg/*.svg',
+    '!' + dir.src + 'img/stack/*.*',
   ]).pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;
@@ -224,12 +225,31 @@ function generateSvgSprite(cb) {
   let config = {
     mode: {
       stack: {
-        sprite: '../img/sprite-svg.svg',
-        example: true
-      },
+        sprite: '../sprite-svg.svg',
+        example: true,
+        prefix: ".svg-i--%s",
+        dimensions: "--dim",
+        render: {
+          scss: {
+            dest: '../../scss/_sprite-svg.scss'
+          }
+        }
+      }
+      // css: {
+      //   bust: false,
+      //   dest: '../scss',
+      //   prefix: ".svg-i-%s",
+      //   sprite: '../img/sprite-svg',
+      //   dimensions: "--dim",
+      //   render: {
+      //     scss: {
+      //       dest: "_sprite-svg.scss",
+      //     },
+      //   },
+      // }
       // css: {
       //   bust: true,
-      //   dest: "scss",
+      //   dest: "../scss",
       //   sprite: "../img/sprite-svg.svg",
       //   prefix: ".i-%s",
       //   dimensions: "--dim",
@@ -239,7 +259,7 @@ function generateSvgSprite(cb) {
       //     },
       //   },
       // },
-    },
+    }
   };
   // let spriteSvgPath = `${dir.src}img/sprite-svg`;
   if (!fileExist(spriteSVGPath + '*.svg')) {

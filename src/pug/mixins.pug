@@ -39,3 +39,9 @@ mixin splitParagraphs(str, cl, listCl)
         = myStr.replace(myNum[0], '').trim()
     - else
       p(class=cl)= myStr
+
+//- вставка svg из спрайта
+mixin svg-icon(name, mod)
+  - mod = mod || ''
+  svg(class="svg-i svg-i--" + name + ' ' + mod)
+    use(xlink:href="img/sprite-svg.svg#" + name)
