@@ -1,0 +1,30 @@
+.auth {
+  display: flex;
+  justify-content: flex-end;
+
+  &__btn {
+    @include hover();
+    border: none;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+
+    &--log-in {
+      color: $warning-color;
+      background-color: $transparent-color;
+    }
+
+    &--sign-up {
+      background-color: $warning-color;
+      color: $white-color;
+      box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
+      transition: box-shadow 0.25s ease-in;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

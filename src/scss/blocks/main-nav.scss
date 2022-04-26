@@ -1,0 +1,50 @@
+.main-nav {
+  display: flex;
+  margin: 0 81px 3px auto;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    height: 28px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    color: $gray-dark;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    text-decoration: none;
+
+    &:visited {
+      color: $gray-dark;
+    }
+
+    &:active {
+      color: $warning-color;
+    }
+
+    &:not(.active),
+    &:not(:active) {
+      @include hover();
+    }
+
+    &.active {
+      color: $warning-color;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  position: sticky;
+  z-index: 500;
+  top: 0;
+  margin: 40px 0;
+  padding: 20px 0;
+
+  &::before {
+    @include pseudo();
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 15px);
+    background: linear-gradient(180deg, $white-color 0%, $white-color 75%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: $screen-lg;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    margin-bottom: 6px;
+  }
+
+  &__logo-img {
+    width: 89px;
+    height: 32px;
+    object-position: left bottom;
+    object-fit: contain;
+  }
+}

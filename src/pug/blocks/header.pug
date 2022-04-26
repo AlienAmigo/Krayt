@@ -1,8 +1,8 @@
 header#home.header
-  a.header__logo(href="#home")
-    img.header__logo-img(src='img/logo.svg', alt='Frispes. Logo')
+  .header__wrapper
+    a.header__logo(href="#home")
+      img.header__logo-img(src='img/logo.svg', alt='Frispes. Logo')
 
-  include ../blocks/main-nav.pug
+    include ../blocks/main-nav.pug
 
-  .header__auth-wrapper
     include ../blocks/auth.pug
