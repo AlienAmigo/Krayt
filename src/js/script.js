@@ -7,5 +7,28 @@ function ready(fn) {
 }
 
 ready(function(){
-  console.log('DOM ready');
+  // Introduction slider
+  const IntroducingSlider = document.querySelector('#introducing-slider');
+  const IntroducingSliderOptions = {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    autoplay: 4000,
+    animationDuration: 1500,
+  }
+  const IntroducingGlide = new Glide(IntroducingSlider, IntroducingSliderOptions);
+  IntroducingGlide.mount();
+
+  // Our Spaces slider
+  const OurSpacesSlider = document.querySelector('#our-spaces-slider');
+  const OurSpacesSliderOptions = {
+    type: 'carousel',
+    startAt: 0,
+    perView: 3,
+    gap: 30,
+  }
+  const OurSpacesGlide = new Glide(OurSpacesSlider, OurSpacesSliderOptions);
+  OurSpacesGlide.mount();
+
+  // =========== END OF READY FUNC
 });

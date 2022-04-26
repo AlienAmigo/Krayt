@@ -157,7 +157,10 @@ exports.processJs = processJs;
 
 function copyJsVendors(cb) {
   if (options.copyJsVendors) {
-    return src(['node_modules/svg4everybody/dist/svg4everybody.min.js'])
+    return src([
+      'node_modules/svg4everybody/dist/svg4everybody.min.js',
+      'node_modules/@glidejs/glide/dist/glide.min.js'
+    ])
       .pipe(concat('vendors.min.js'))
       .pipe(dest(dir.build + 'js/'));
   } else {
@@ -170,7 +173,7 @@ function copyImages() {
     dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}',
     '!' + dir.src + 'img/spritesmith/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}',
     '!' + dir.src + 'img/sprite-svg/*.svg',
-    '!' + dir.src + 'img/stack/*.*',
+    '!' + dir.src + 'img/stack/*.*'
   ]).pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;
@@ -220,15 +223,15 @@ exports.generatePngSprite = generatePngSprite;
 // создание svg-спрайта
 function generateSvgSprite(cb) {
   let spriteSVGPath = `${dir.src}img/sprite-svg/`; // <-- Set to your SVG base directory
-  let svgGlob = "**/*.svg"; // <-- Glob to match your SVG files
+  let svgGlob = '**/*.svg'; // <-- Glob to match your SVG files
   let outDir = `${dir.src}img/`; // <-- Main output directory
   let config = {
     mode: {
       stack: {
         sprite: '../sprite-svg.svg',
         example: true,
-        prefix: ".svg-i--%s",
-        dimensions: "--dim",
+        prefix: '.svg-i--%s',
+        dimensions: '--dim',
         render: {
           scss: {
             dest: '../../scss/_sprite-svg.scss'
@@ -267,7 +270,7 @@ function generateSvgSprite(cb) {
       src(svgGlob, { cwd: spriteSVGPath })
         .pipe(plumber())
         .pipe(svgSprite(config))
-        .on("error", function (error) {
+        .on('error', function (error) {
           console.log(error);
         })
         .pipe(dest(outDir)) && copyImages()

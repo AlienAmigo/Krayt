@@ -1,4 +1,5 @@
 @import 'node_modules/normalize.css/normalize';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core'; /* stylelint-disable-line  scss/at-import-partial-extension */
 
 @import 'fonts';
 @import 'variables';
@@ -7,4 +8,4 @@
 @import 'sprite-svg';
 
 @import 'blocks/page';
-@import 'blocks/popup';
+
