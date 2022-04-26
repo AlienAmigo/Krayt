@@ -7,15 +7,28 @@
     padding: 0;
 
     &::selection {
+      color: $white-color;
+      background-color: $main-color;
     }
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
   &__inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
   }
 
   &__content {
-  }
-
-  &__footer-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
   }
 }

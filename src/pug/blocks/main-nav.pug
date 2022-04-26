@@ -1,0 +1,6 @@
+nav.main-nav
+  .main-nav__wrapper
+    ul.main-nav__list
+      each item in mainMenuItems
+        li.main-nav__item
+          a.main-nav__link(href=`${item.link}`)= item.title

@@ -1,0 +1,32 @@
+footer.footer
+  .footer__wrapper
+    section.footer__section.footer__section--info
+      .footer__logo
+        img.footer__logo-img(src='img/logo-white.svg', alt='Frispes. Logo')
+      p.footer__info-text We offer comfortable spaces, cozy cafe, high-speed internet, spacious parking area and many more for your best workspaces and meetings
+      .footer__social-links
+        a.footer__social-link.footer__social-link--instagram(
+          href='#',
+          target='_blank')
+        a.footer__social-link.footer__social-link--youtube(
+          href='#',
+          target='_blank')
+        a.footer__social-link.footer__social-link--facebook(
+          href='#',
+          target='_blank')
+    each item in footerSections
+      section(class=`footer__section footer__section--${item.title.toLowerCase().replace(/^([^\s]+)/g,'$1')}`)
+        h3.footer__subhead= item.title
+        ul.footer__nav-list
+          each subitem in item.items
+            li.footer__nav-item
+              a.footer__nav-link(href=`${subitem.link}`)= subitem.title
+    section.footer__section.footer__section--contacts
+      h3.footer__subhead Contact Us
+        ul.footers__nav-list
+          li.footer__nav-item E.
+            a.footer__nav-link(href='mailto:Hello@frispes.com') Hello@frispes.com
+          li.footer__nav-item A.
+            a.footer__nav-link(href='https://goo.gl/maps/tFMxi4SHh2zy2HDY6') Jalan Jayakatwang No.301 Ngasem, Kediri
+          li.footer__nav-item P.
+            a.footer__nav-link(href='tel:6282334670000') (+62) 82334670000
