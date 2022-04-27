@@ -2,34 +2,40 @@ section.our-spaces
   .our-spaces__text-wrapper
     h2.our-spaces__title Our Spaces
     p.our-spaces__text Our space is&nbsp;designed to&nbsp;give you a&nbsp;different experience when working with your team or&nbsp;personally
-  #our-spaces-slider.glide.our-spaces__slider
-    .glide__track(data-glide-el='track')
-      .glide__slides
-        .glide__slide
-          .our-spaces-pic-slide
-            .our-spaces-pic-slide__img-wrapper
-              img(src='img/spaces01.png', alt='Working with team')
-              a.our-spaces-pic-slide__link(href='#')
-                +svg-icon('arrow-right')
-            h4.our-spaces-pic-slide__title Working with team
-        .glide__slide
-          .our-spaces-text-slide
-            .our-spaces-text-slide__text-wrapper
-              h4.our-spaces-text-slide__title Private Space
-              p.our-spaces-text-slide__text Comfortable space, Full speed wifi, Free coffe & Snack and many more
-            a.our-spaces-text-slide__link(href='#') Check avaibility
-              +svg-icon('arrow-right')
-        .glide__slide
-          .our-spaces-pic-slide
-            .our-spaces-pic-slide__img-wrapper
-              img(src='img/spaces03.png', alt='Working with team')
-              a.our-spaces-pic-slide__link(href='#')
-                +svg-icon('arrow-right')
-            h4.our-spaces-pic-slide__title Custom Office
-        .glide__slide
-          .our-spaces-text-slide
-            .our-spaces-text-slide__text-wrapper
-              h4.our-spaces-text-slide__title Comfortable Zone
-              p.our-spaces-text-slide__text Design furniture, chilout zone, free parking
-            a.our-spaces-text-slide__link(href='#') Check avaibility
-              +svg-icon('arrow-right')
+  #our-spaces-slider.our-spaces__slider
+    .our-spaces__slide
+      .our-spaces-pic-slide
+        .our-spaces-pic-slide__img-wrapper
+          img(src='img/spaces01.png', alt='Working with team', loading='lazy')
+          a.our-spaces-pic-slide__link(href='#')
+            +svg-icon('arrow-right')
+        h4.our-spaces-pic-slide__title Working with team
+    .our-spaces__slide
+      .our-spaces-text-slide
+        .our-spaces-text-slide__text-wrapper
+          h4.our-spaces-text-slide__title Private Space
+          p.our-spaces-text-slide__text Comfortable space, Full speed wifi, Free coffee &&nbsp;Snack and&nbsp;many more
+        a.our-spaces-text-slide__link(href='#') Check avaibility
+          +svg-icon('arrow-right')
+    .our-spaces__slide
+      .our-spaces-pic-slide
+        .our-spaces-pic-slide__img-wrapper
+          img(src='img/spaces03.png', alt='Working with team', loading='lazy')
+          a.our-spaces-pic-slide__link(href='#')
+            +svg-icon('arrow-right')
+        h4.our-spaces-pic-slide__title Custom Office
+    .our-spaces__slide
+      .our-spaces-text-slide
+        .our-spaces-text-slide__text-wrapper
+          h4.our-spaces-text-slide__title Comfortable Zone
+          p.our-spaces-text-slide__text Design furniture, chilout zone, free parking
+        a.our-spaces-text-slide__link(href='#') Check avaibility
+          +svg-icon('arrow-right')
+  .our-spaces__slider-counter-wrapper
+    #our-spaces-slider-counter.our-spaces__counter-slider
+      .our-spaces__counter-slide 01
+      .our-spaces__counter-slide 02
+      .our-spaces__counter-slide 03
+      .our-spaces__counter-slide 04
+    .our-spaces__slider-counter-total /
+      span 04

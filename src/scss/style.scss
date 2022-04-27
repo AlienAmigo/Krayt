@@ -1,5 +1,5 @@
 @import 'node_modules/normalize.css/normalize';
-@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core'; /* stylelint-disable-line  scss/at-import-partial-extension */
+@import 'node_modules/slick-slider/slick/slick'; /* stylelint-disable-line  scss/at-import-partial-extension */
 
 @import 'fonts';
 @import 'variables';
@@ -12,3 +12,7 @@
 @import 'blocks/footer';
 @import 'blocks/main-nav';
 @import 'blocks/auth';
+@import 'blocks/introducing';
+@import 'blocks/our-spaces';
+@import 'blocks/our-spaces-pic-slide';
+@import 'blocks/our-spaces-text-slide';

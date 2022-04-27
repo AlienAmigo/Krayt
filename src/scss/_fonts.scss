@@ -2,9 +2,7 @@
   font-family: Lora;
   src:
     url('../fonts/lora-variablefont.woff2') format('woff2'),
-    url('../fonts/lora-variablefont.woff') format('woff'),
     url('../fonts/lora-variablefont.ttf') format('woff');
-  font-weight: 300;
   font-style: normal;
   font-display: block;
 }
@@ -26,7 +24,7 @@
     url('../fonts/lato-medium.woff2') format('woff2'),
     url('../fonts/lato-medium.woff') format('woff'),
     url('../fonts/lato-medium.ttf') format('woff');
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: block;
 }

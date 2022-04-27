@@ -1,0 +1,134 @@
+.our-spaces {
+  display: flex;
+  flex-direction: column;
+  width: $screen-lg;
+  margin: 112px auto 0;
+  padding: 0 $padding-lg;
+
+  &__text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include cols(4, lg, true);
+    font-variation-settings: 'wght' 600;
+    font-size: 40px;
+    line-height: 51px;
+    color: $title-color;
+    font-family: $ff-serif;
+  }
+
+  &__text {
+    @include cols(5, lg);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $gray-light;
+  }
+
+  &__slide {
+    width: calc((#{$screen-lg} - (#{$padding-lg} * 2) - (#{$gap-lg} * 2)) / 3);
+  }
+
+  &__slider {
+    position: relative;
+
+    & .slick-track {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    & .slick-arrow {
+      @include hover();
+      position: absolute;
+      top: -77px;
+      right: 0;
+      width: 92px;
+      height: 26px;
+      border: none;
+      outline: 0;
+      background-color: $transparent-color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      color: $transparent-color;
+      font-size: 0;
+      cursor: pointer;
+
+      &.slick-next {
+        right: 116px;
+        width: 53px;
+        background-image: url('../img/sprite-svg.svg#gallery-arrow-left');
+      }
+
+      &.slick-prev {
+        background-image: url('../img/sprite-svg.svg#gallery-arrow-right-active');
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 37px;
+      list-style: none;
+
+      li {
+        button {
+          width: 40px;
+          height: 4px;
+          border: none;
+          outline: 0;
+          background-color: #dfdfdf;
+          color: $transparent-color;
+          font-size: 0;
+          overflow: hidden;
+          cursor: pointer;
+          transition: background-color 0.5s linear;
+        }
+
+        &.slick-active {
+          button {
+            background-color: $warning-color;
+            opacity: 1;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__counter-slider {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  &__counter-slide {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__slider-counter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7px;
+  }
+
+  &__slider-counter-total {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    span {
+      margin-left: 5px;
+      color: $gray-light;
+    }
+  }
+}

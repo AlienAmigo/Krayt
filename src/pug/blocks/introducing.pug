@@ -1,21 +1,15 @@
 section.introducing
+  .introducing__header Introducing
   .introducing__text-wrapper
-    .introducing__header Introducing
     h1.introducing__title #[em Revolutionary] co-working space to&nbsp;realize your innovation
     p.introducing__text In frispes, we spearhead new initiatives and provide mentorship to a new startup, and help grow their opportunities in key local, regional and global markets
-  #introducing-slider.glide
-    .glide__track(data-glide-el='track')
-      ul.glide__slides
-        li.glide__slide
-          img(src='img/banner01.png', alt='Frispes. 01', loading='lazy')
-        li.glide__slide
-          img(src='img/banner02.png', alt='Frispes. 02', loading='lazy')
-        li.glide__slide
-          img(src='img/banner01.png', alt='Frispes. 03', loading='lazy')
-        li.glide__slide
-          img(src='img/banner02.png', alt='Frispes. 04', loading='lazy')
-      .glide__bullets(data-glide-el="controls[nav]")
-        button.glide__bullet(data-glide-dir="=0")
-        button.glide__bullet(data-glide-dir="=1")
-        button.glide__bullet(data-glide-dir="=2")
-        button.glide__bullet(data-glide-dir="=3")
+  .introducing__slider
+    #introducing-slider
+      .introducing__slide
+        img(src='img/banner01.png', alt='Frispes. 01', loading='lazy')
+      .introducing__slide
+        img(src='img/banner02.png', alt='Frispes. 02', loading='lazy')
+      .introducing__slide
+        img(src='img/banner01.png', alt='Frispes. 03', loading='lazy')
+      .introducing__slide
+        img(src='img/banner02.png', alt='Frispes. 04', loading='lazy')

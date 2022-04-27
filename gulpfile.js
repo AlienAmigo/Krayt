@@ -159,7 +159,8 @@ function copyJsVendors(cb) {
   if (options.copyJsVendors) {
     return src([
       'node_modules/svg4everybody/dist/svg4everybody.min.js',
-      'node_modules/@glidejs/glide/dist/glide.min.js'
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/slick-slider/slick/slick.min.js'
     ])
       .pipe(concat('vendors.min.js'))
       .pipe(dest(dir.build + 'js/'));

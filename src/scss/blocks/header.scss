@@ -4,7 +4,7 @@
   z-index: 500;
   top: 0;
   margin: 40px 0;
-  padding: 20px 0;
+  padding: 20px;
 
   &::before {
     @include pseudo();
@@ -22,6 +22,7 @@
     justify-content: space-between;
     width: $screen-lg;
     margin: 0 auto;
+    padding: 0 $padding-lg;
   }
 
   &__logo {

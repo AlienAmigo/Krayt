@@ -1,5 +1,6 @@
 @use 'sass:math'; /* stylelint-disable-line at-rule-no-unknown */
-//
+@import 'variables';
+
 @mixin font($font_name, $file_name, $weight: 0, $style: normal) {
   @font-face {
     font-family: $font_name;
@@ -165,5 +166,46 @@
       transform: scale(1.025);
       transition: transform 0.25s ease-in;
     }
+  }
+}
+
+@mixin cols($num: 1, $rez: lg, $incl-gap: false) {
+  @if $incl-gap {
+    $incl-gap: 1;
+  } @else {
+    $incl-gap: 0;
+  }
+  @if lg {
+    /* stylelint-disable */
+    width:
+      calc(
+      (100% - (#{$gap-lg} * (#{$cols-lg - 1}))) /
+        #{$cols-lg} *
+        #{$num} +
+        (#{$gap-lg} * (#{$num} - 1)) +
+        #{$gap-lg} *
+        #{$incl-gap}
+    );
+    /* stylelint-enable */
+  }
+}
+
+@mixin section-header($color: $text-color) {
+  display: flex;
+  position: relative;
+  width: max-content;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $font-family;
+
+  &::before {
+    @include pseudo();
+    bottom: 11px;
+    left: calc(100% + 15px);
+    width: 73px;
+    height: 2px;
+    background-color: $color;
   }
 }

@@ -1,0 +1,69 @@
+.our-spaces-text-slide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  //width: calc((#{$screen-lg} - (#{$padding-lg} * 2) - (#{$gap-lg} * 2)) / 3);
+  min-height: 467px;
+  background-color: $title-color;
+
+  &::before {
+    @include pseudo();
+    top: 16px;
+    right: 16px;
+    width: 90px;
+    height: 90px;
+    background: url('../img/sprite-svg.svg#bars') no-repeat center / cover;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    color: $white-color;
+    font-family: $ff-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+  }
+
+  &__text {
+    width: 253px;
+    margin: 0 auto;
+    text-align: center;
+    color: $white-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__link {
+    @include hover();
+    display: flex;
+    align-items: center;
+    width: 255px;
+    background-color: $warning-color;
+    padding: 25px 0 25px 53px;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+
+    &:visited {
+      color: $white-color;
+    }
+
+    & .svg-i {
+      width: 9px;
+      height: 15px;
+      margin-left: 33px;
+    }
+  }
+}

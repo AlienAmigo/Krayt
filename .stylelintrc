@@ -364,7 +364,13 @@
       'block-closing-brace-empty-line-before':
         ['never', { 'message': 'Перед «}» пустой строки быть не должно' }],
       'block-closing-brace-newline-after':
-        ['always', { 'message': 'После «}» переносу строки быть должно' }],
+        [
+          'always',
+          {
+            'message': 'После «}» переносу строки быть должно',
+            ignoreAtRules: ['if', 'else']
+          }
+        ],
       'block-closing-brace-newline-before':
         ['always', { 'message': 'Перед «}» переносу строки быть должно' }],
       # "block-no-empty": [true, {
@@ -513,7 +519,15 @@
           {
             'message': 'Перед @-правилами строку пустую оставь (кроме @import и @include)',
             ignoreAtRules:
-              ['import', 'include', 'function', 'return', 'if', 'else'],
+              [
+                'import',
+                'include',
+                'function',
+                'return',
+                'if',
+                'else',
+                'font-face'
+              ],
             ignore: ['after-comment']
           }
         ],
@@ -658,17 +672,17 @@
           }
         ],
       'selector-max-class': [
-          2,
+          3,
           {
             # "severity": "warning",
-            'message': 'Классов в селекторе более двух использовать не стоит'
+            'message': 'Классов в селекторе более трёх использовать не стоит'
           }
         ],
       'selector-max-combinators': [
-          2,
+          3,
           {
             # "severity": "warning",
-            'message': 'Комбинаторов в селекторе более двух использовать не стоит'
+            'message': 'Комбинаторов в селекторе более трёх использовать не стоит'
           }
         ],
       # "selector-nested-pattern": ["^(&|\\.\\w+\\s+&)(__\\w|--\\w)?", {
