@@ -1,0 +1,12 @@
+section#events.events
+  .events__header Our Facilities
+  h2.events__title All facilities are designed to meet all your needs
+  .events__slider-wrapper
+    #events-slider.events__slider
+      each item in eventsSlider
+        .event__slide
+          img.event__slide-img(
+            data-title=`${item.title}`,
+            src=`img/${item.img}`,
+            alt=`${item.title}`,
+            loading='lazy')

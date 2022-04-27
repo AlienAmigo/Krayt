@@ -30,7 +30,7 @@ ready(function () {
     slidesToShow: 3,
     speed: 500,
     asNavFor: '#our-spaces-slider-counter',
-    variableWidth: true,
+    variableWidth: true
   });
 
   $('#our-spaces-slider-counter').slick({
@@ -40,6 +40,17 @@ ready(function () {
     speed: 0,
     swipe: false,
     variableWidth: true
+  });
+
+  // Events slider
+  $('#events-slider').slick({
+    dots: true,
+    arrows: false,
+    startAt: 3,
+    customPaging: function (slider, i) {
+      let title = $(slider.$slides[i]).find('[data-title]').data('title');
+      return title;
+    }
   });
   // const OurSpacesSlider = document.querySelector('#our-spaces-slider');
   // const OurSpacesSliderOptions = {
