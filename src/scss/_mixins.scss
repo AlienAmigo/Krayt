@@ -190,6 +190,27 @@
   }
 }
 
+@mixin cols-px($num: 1, $rez: lg, $incl-gap: false) {
+  @if $incl-gap {
+    $incl-gap: 1;
+  } @else {
+    $incl-gap: 0;
+  }
+  @if lg {
+    /* stylelint-disable */
+    width:
+      calc(
+      (#{$screen-lg} - (#{$gap-lg} * (#{$cols-lg - 1}))) /
+        #{$cols-lg} *
+        #{$num} +
+        (#{$gap-lg} * (#{$num} - 1)) +
+        #{$gap-lg} *
+        #{$incl-gap}
+    );
+    /* stylelint-enable */
+  }
+}
+
 @mixin section-header($color: $text-color) {
   display: flex;
   position: relative;
@@ -199,6 +220,7 @@
   font-size: 20px;
   line-height: 30px;
   font-family: $font-family;
+  color: $color;
 
   &::before {
     @include pseudo();
@@ -208,4 +230,12 @@
     height: 2px;
     background-color: $color;
   }
+}
+
+@mixin section-title($color: $title-color) {
+  font-variation-settings: 'wght' 600;
+  font-size: 40px;
+  line-height: 51px;
+  color: $color;
+  font-family: $ff-serif;
 }

@@ -13,11 +13,7 @@
 
   &__title {
     @include cols(4, lg, true);
-    font-variation-settings: 'wght' 600;
-    font-size: 40px;
-    line-height: 51px;
-    color: $title-color;
-    font-family: $ff-serif;
+    @include section-title();
   }
 
   &__text {

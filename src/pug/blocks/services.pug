@@ -1,0 +1,12 @@
+section.services
+  .services__text-wrapper
+    .services__header Why Frispes
+    h2.services__title We revolutionize your workspace
+    p.services__text With a decade of insights and expertise, we're decided to reimagine co-working space, designed to help a new startup grow up and realize their ideas so they can give a positive impacts on many people
+  ul.services__features
+    each item in serviceFeatures
+      li.services__feature
+        .services__feature-ico
+          +svg-icon(item.img, `svg-i--${item.img}-dim`)
+        p.services__feature-text= item.title
+          span= item.position

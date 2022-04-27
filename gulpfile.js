@@ -232,7 +232,7 @@ function generateSvgSprite(cb) {
         sprite: '../sprite-svg.svg',
         example: true,
         prefix: '.svg-i--%s',
-        dimensions: '--dim',
+        dimensions: '-dim',
         render: {
           scss: {
             dest: '../../scss/_sprite-svg.scss'
