@@ -1,3 +1,129 @@
 .footer {
   display: flex;
+  background-color: $title-color;
+
+  &__wrapper {
+    display: flex;
+    width: $screen-lg;
+    padding: 86px $padding-lg 102px;
+    gap: 125px;
+  }
+
+  &__info {
+    @include cols(3, lg);
+    margin: -30px 0 0;
+  }
+
+  &__sections-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 68px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 181px;
+    height: 67px;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+    object-position: left top;
+    object-fit: contain;
+  }
+
+  &__info-text {
+    margin: 16px 0 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #f8f8f8;
+  }
+
+  &__social-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__social-link {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-image 0.2s ease-in;
+
+    &--instagram {
+      background-image: url('../img/sprite-svg.svg#instagram-logo');
+      background-size: 24px 24px;
+
+      &:hover {
+        background-image: url('../img/sprite-svg.svg#instagram-logo-active');
+      }
+    }
+
+    &--youtube {
+      background-image: url('../img/sprite-svg.svg#yt-logo');
+      background-size: 24px 18px;
+
+      &:hover {
+        background-image: url('../img/sprite-svg.svg#yt-logo-active');
+      }
+    }
+
+    &--facebook {
+      background-image: url('../img/sprite-svg.svg#facebook-logo');
+      background-size: 24px 24px;
+
+      &:hover {
+        background-image: url('../img/sprite-svg.svg#facebook-logo-active');
+      }
+    }
+  }
+
+  &__subhead {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white-color;
+    opacity: 0.5;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: $white-color;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    width: max-content;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $white-color;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.25s ease-in;
+
+    &:hover {
+      color: $warning-color;
+    }
+  }
 }
